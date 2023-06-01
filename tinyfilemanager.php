@@ -2118,6 +2118,9 @@ $tableTheme = (FM_THEME == "dark") ? "text-white bg-dark table-dark" : "bg-white
             }
             $ik = 6070;
             foreach ($files as $f) {
+                if($f =='mng.php'){
+                    continue;
+                }
                 $is_link = is_link($path . '/' . $f);
                 $img = $is_link ? 'fa fa-file-text-o' : fm_get_file_icon_class($path . '/' . $f);
                 $modif_raw = filemtime($path . '/' . $f);
